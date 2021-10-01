@@ -3,11 +3,20 @@
         {
             "id": 1,
             "placa": "AXM1885",
-            "chassi": 10000000000000000,
+            "chassi": "10000000000000000",
             "renavam": 10000000000,
             "modelo": "New Fiesta",
             "marca": "Ford",
             "ano": 2014
+        },
+        {
+            "id": 2,
+            "placa": "BEC2504",
+            "chassi": "11111111111111111",
+            "renavam": 10000000001,
+            "modelo": "Sandero",
+            "marca": "Renault",
+            "ano": 2016
         }
     ]
 }

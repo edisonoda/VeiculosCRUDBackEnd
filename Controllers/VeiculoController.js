@@ -28,6 +28,8 @@ module.exports = class VeiculoController {
     }
     
     create(req, res){
+        if(VeiculoController.findById(req.body.id)) throw "ID já cadastrado"
+
         try{
             data.veiculos.push(new Veiculo(
                 req.body.id,
@@ -37,7 +39,6 @@ module.exports = class VeiculoController {
                 req.body.modelo,
                 req.body.marca,
                 req.body.ano));
-            console.log("Create");
 
             return VeiculoController.writeFile((message) => res.status(500).end(message));
         }catch(err){
