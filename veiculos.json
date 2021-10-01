@@ -1,0 +1,13 @@
+{
+    "veiculos": [
+        {
+            "id": 1,
+            "placa": "AXM1885",
+            "chassi": 10000000000000000,
+            "renavam": 10000000000,
+            "modelo": "New Fiesta",
+            "marca": "Ford",
+            "ano": 2014
+        }
+    ]
+}
