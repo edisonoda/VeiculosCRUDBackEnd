@@ -1,0 +1,30 @@
+{
+  "name": "veiculoscrud",
+  "version": "1.0.0",
+  "description": "Teste técnico de Node.js, testes unitários e CRUD",
+  "main": "app.js",
+  "directories": {
+    "test": "mocha"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edisonoda/VeiculosCRUD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edisonoda/VeiculosCRUD/issues"
+  },
+  "homepage": "https://github.com/edisonoda/VeiculosCRUD#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.2",
+    "nodemon": "^2.0.13"
+  }
+}
