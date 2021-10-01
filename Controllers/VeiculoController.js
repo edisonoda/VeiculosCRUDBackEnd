@@ -50,7 +50,7 @@ module.exports = class VeiculoController {
         try{
             const veiculo = VeiculoController.findById(req.params.id);
     
-            if(!veiculo) return res.status(404).send("Veiculo não encontrada.");
+            if(!veiculo) return res.status(404).send("Veículo não encontrado.");
     
             if(req.body.id){
                 veiculo.id = req.body.id;
@@ -82,7 +82,7 @@ module.exports = class VeiculoController {
     
             return VeiculoController.writeFile((message) => res.end(message));
         }catch(err){
-            return res.status(400).send("Erro ao atualizar veiculo!");
+            return res.status(400).send("Erro ao atualizar veículo!");
         }
     }
     
@@ -92,7 +92,7 @@ module.exports = class VeiculoController {
     
             return VeiculoController.writeFile((message) => res.end(message));
         }catch(err){
-            return res.status(400).send("Erro ao deletar veiculo!");
+            return res.status(400).send("Erro ao deletar veículo!");
         }
     }
     
@@ -100,7 +100,7 @@ module.exports = class VeiculoController {
         try{
             return res.end(JSON.stringify(data));
         }catch(err){
-            return res.status(400).send("Erro ao requisitar veiculos!");
+            return res.status(400).send("Erro ao requisitar veículos!");
         }
     }
     
@@ -108,11 +108,11 @@ module.exports = class VeiculoController {
         try{
             const veiculo = VeiculoController.findById(req.params.id);
     
-            if(!veiculo) return res.status(404).send("Veiculo não encontrada.");
+            if(!veiculo) return res.status(404).send("Veículo não encontrado.");
     
             return res.end(JSON.stringify(veiculo));
         }catch(err){
-            return res.status(400).send("Erro ao requisitar veiculos!");
+            return res.status(400).send("Erro ao requisitar veículos!");
         }
     }
 }
