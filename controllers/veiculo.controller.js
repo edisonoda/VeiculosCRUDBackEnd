@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const data = require("../veiculos.json");
-var Veiculo = require("../Models/Veiculo");
+var Veiculo = require("../models/veiculo.model");
 
 module.exports = class VeiculoController {
     static writeFile(cb){
@@ -40,7 +40,7 @@ module.exports = class VeiculoController {
                 req.body.marca,
                 req.body.ano));
 
-            return VeiculoController.writeFile((message) => res.status(500).end(message));
+            return VeiculoController.writeFile((message) => res.status(200).end(message));
         }catch(err){
             return res.status(400).send(err);
         }
@@ -80,7 +80,7 @@ module.exports = class VeiculoController {
                 veiculo.ano = req.body.ano;
             }
     
-            return VeiculoController.writeFile((message) => res.end(message));
+            return VeiculoController.writeFile((message) => res.status(200).end(message));
         }catch(err){
             return res.status(400).send("Erro ao atualizar veículo!");
         }
@@ -90,7 +90,7 @@ module.exports = class VeiculoController {
         try{
             data.veiculos = data.veiculos.filter(veiculo => veiculo.id != req.params.id);
     
-            return VeiculoController.writeFile((message) => res.end(message));
+            return VeiculoController.writeFile((message) => res.status(200).end(message));
         }catch(err){
             return res.status(400).send("Erro ao deletar veículo!");
         }
@@ -98,7 +98,7 @@ module.exports = class VeiculoController {
     
     index(req, res){
         try{
-            return res.end(JSON.stringify(data));
+            return res.status(200).end(JSON.stringify(data));
         }catch(err){
             return res.status(400).send("Erro ao requisitar veículos!");
         }
@@ -110,7 +110,7 @@ module.exports = class VeiculoController {
     
             if(!veiculo) return res.status(404).send("Veículo não encontrado.");
     
-            return res.end(JSON.stringify(veiculo));
+            return res.status(200).end(JSON.stringify(veiculo));
         }catch(err){
             return res.status(400).send("Erro ao requisitar veículos!");
         }

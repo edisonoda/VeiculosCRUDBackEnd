@@ -1,17 +1,8 @@
 module.exports = class Veiculo{
     constructor(id, placa, chassi, renavam, modelo, marca, ano){
         if(!id || !placa || !chassi || !renavam || !modelo || !marca || !ano){
-            throw "Dados inválidos.";
-        }
-
-        if(typeof id != "number" ||
-        typeof placa != "string" ||
-        typeof chassi != "string" ||
-        typeof renavam != "number" ||
-        typeof modelo != "string" ||
-        typeof marca != "string" ||
-        typeof ano != "number"){
-            throw "Dados inválidos.";
+            console.log("algo null");
+            throw "Dados inválidos (Null).";
         }
 
         if(placa.toString().length != 7) throw "Placa inválida"

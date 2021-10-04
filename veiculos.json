@@ -3,7 +3,7 @@
         {
             "id": 1,
             "placa": "AXM1885",
-            "chassi": "10000000000000000",
+            "chassi": "10000000000000001",
             "renavam": 10000000000,
             "modelo": "New Fiesta",
             "marca": "Ford",
@@ -17,6 +17,15 @@
             "modelo": "Sandero",
             "marca": "Renault",
             "ano": 2016
+        },
+        {
+            "id": 3,
+            "placa": "ASD1234",
+            "chassi": "12345678912345678",
+            "renavam": "12345678912",
+            "modelo": "Sandero Stepway",
+            "marca": "Renault",
+            "ano": "2018"
         }
     ]
 }

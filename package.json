@@ -2,7 +2,7 @@
   "name": "veiculoscrud",
   "version": "1.0.0",
   "description": "Teste técnico de Node.js, testes unitários e CRUD",
-  "main": "app.js",
+  "main": "server.js",
   "directories": {
     "test": "mocha"
   },
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/edisonoda/VeiculosCRUD#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   },
   "devDependencies": {

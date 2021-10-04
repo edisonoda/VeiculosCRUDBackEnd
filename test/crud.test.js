@@ -1,6 +1,6 @@
 const assert = require("chai").assert;
 const data = require("../veiculos.json");
-var VeiculoController = require("../Controllers/VeiculoController");
+var VeiculoController = require("../controllers/veiculo.controller");
 
 describe("FindById", function() {
     let id = data.veiculos[0].id;
